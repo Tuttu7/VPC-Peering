@@ -77,7 +77,7 @@ Destination     Target                 Status    Propagated
 * Subnet assosiate (Main route)
 Route table > Subnet assossiation > Edit subnet assosiation > Select Subnet ID > Save
 
-##### - Then go to the instance created in ohio region and then try to ping the private IP of the instance created in the oregon region. You will not able to ping the instance.
+### - Then go to the instance created in ohio region and then try to ping the private IP of the instance created in the oregon region. You will not able to ping the instance.
 
 ```
 ping 10.201.1.221

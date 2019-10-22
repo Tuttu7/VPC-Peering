@@ -40,7 +40,7 @@ Destination   Target            Status  Propagated
 
 0.0.0.0/0 igw-0415e4e592d6d6cf2	active  No
 ```
-> Subnet assosiate (Main route)
+* Subnet assosiate (Main route)
 Route table > Subnet assossiation > Edit subnet assosiation > Select Subnet ID > Save
 
 ## - Creating an EC2 instance in ohio

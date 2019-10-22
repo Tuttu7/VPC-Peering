@@ -14,25 +14,25 @@ Following are the steps involved:
 
 ## - Creating an VPC in ohio region
 
-> Tag : vpc-ohio-1
-> IPV4 CIDR block : 10.200.0.0/16
+* Tag : vpc-ohio-1
+* IPV4 CIDR block : 10.200.0.0/16
 
 ## - Creating subnet 
 
-> Tag : subnet01-vpc-ohio-1
-> VPC : vpc-ohio-1
-> Availability zone : 2a
-> IPV4 CIDR : 10.200.1.0/24
+* Tag : subnet01-vpc-ohio-1
+* VPC : vpc-ohio-1
+* Availability zone : 2a
+* IPV4 CIDR : 10.200.1.0/24
 
 ## - Creating Internet gateway
 
-> Tag : igw-vpc-ohio-1
-> Attach gateway to VPC
+* Tag : igw-vpc-ohio-1
+* Attach gateway to VPC
 
 ## - Creating route table
 
-> Tag : public-routetable-vpc-ohio-1
-> Route tables > Edit routes > Add route 
+* Tag : public-routetable-vpc-ohio-1
+* Route tables > Edit routes > Add route 
 ```
 Destination   Target            Status  Propagated
 
@@ -47,25 +47,25 @@ Route table > Subnet assossiation > Edit subnet assosiation > Select Subnet ID >
 > Services > ec2 > Lauanch instance > Select the vpc and subnet we have created 
 
 ## - Creating an VPC in oregon region
-> Tag : vpc-oregon-1
-> CIDR : 10.201.0.0/16
+* Tag : vpc-oregon-1
+* CIDR : 10.201.0.0/16
 
 ## - Creating subnet 
 
-> Tag : subnet01-vpc-oregon-1
-> VPC : vpc-oregon-1
-> Availability zone : 2a
-> IPV4 CIDR : 10.201.1.0/24
+* Tag : subnet01-vpc-oregon-1
+* VPC : vpc-oregon-1
+* Availability zone : 2a
+* IPV4 CIDR : 10.201.1.0/24
 
 ## - Creating Internet gateway
 
-> Tag : igw-vpc-oregon-1
-> Attach gateway to VPC
+* Tag : igw-vpc-oregon-1
+* Attach gateway to VPC
 
 ## - Creating route table
 
-> Tag : public-routetable-vpc-ohio-1
-> Route tables > Edit routes > Add route 
+* Tag : public-routetable-vpc-ohio-1
+* Route tables > Edit routes > Add route 
 ```
 Destination     Target                 Status    Propagated
 
@@ -74,7 +74,7 @@ Destination     Target                 Status    Propagated
 0.0.0.0/0     igw-06f448e6b76cd7a70    active    NO
 
 ```
-> Subnet assosiate (Main route)
+* Subnet assosiate (Main route)
 Route table > Subnet assossiation > Edit subnet assosiation > Select Subnet ID > Save
 
 ##### - Then go to the instance created in ohio region and then try to ping the private IP of the instance created in the oregon region. You will not able to ping the instance.
@@ -89,11 +89,11 @@ From 10.200.1.221 icmp_seq=3 Destination Host Unreachable
 ```
 
 ## - Creating the Peering connection in ohio region
-> Peering connection > Create pearing connection 
-> Tag : vpc-peer-ohio-oregon-1
-> VPC requested : vpc-ohio
-> Select another VPC to peer with > Region > Another > region > us-west-2
-> VPC accepter > Give the oregon VPC ID 
+* Peering connection > Create pearing connection 
+* Tag : vpc-peer-ohio-oregon-1
+* VPC requested : vpc-ohio
+* Select another VPC to peer with > Region > Another > region > us-west-2
+* VPC accepter > Give the oregon VPC ID 
 
 ## - Editing routing tables in oregon region
 > Route tables > Edit routes > Add route > Select the peering as the target
